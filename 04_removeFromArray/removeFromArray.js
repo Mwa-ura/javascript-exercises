@@ -1,15 +1,10 @@
-const removeFromArray = function(array, num) { 
-    var list = [];
-	for (i = 0; i<array.length; i++) {
-		var eachItem = array[i];
-		if (eachItem == num) { 
-			continue;
-		}
-		else {
-			list.push(eachItem)
-		}
-	}
-	return list;
+const removeFromArray = function(array, ...args) { 
+	let array2 = [...args]
+
+	newArray = array.filter(function(element) {
+		return !array2.includes(element);
+	});
+	return newArray;
 };
 
 // Do not edit below this line
